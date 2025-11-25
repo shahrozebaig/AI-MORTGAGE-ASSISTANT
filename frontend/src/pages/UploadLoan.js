@@ -50,7 +50,7 @@ export default function UploadLoan() {
     formData.append("file", file);
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/analyze-loan/", {
+      const response = await fetch("https://ai-mortgage-assistant.onrender.com/analyze-loan/", {
         method: "POST",
         body: formData,
       });
@@ -67,7 +67,6 @@ export default function UploadLoan() {
       setRiskScore(score);
       setDecision(dec);
 
-      // ✅ PERFECT FIX: browser-safe preview URL
       const localPreviewURL = URL.createObjectURL(file);
 
       const history = JSON.parse(localStorage.getItem("loanHistory") || "[]");
@@ -75,7 +74,7 @@ export default function UploadLoan() {
       history.unshift({
         id: Date.now(),
         fileName: file.name,
-        filePath: localPreviewURL,   // ✅ ALWAYS WORKS
+        filePath: localPreviewURL,
         riskScore: score,
         decision: dec,
         summary: sections.summary,
