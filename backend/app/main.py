@@ -13,10 +13,12 @@ UPLOAD_DIR = os.path.abspath(os.path.join(BASE_DIR, "..", "uploads"))
 # ✅ Ensure uploads folder always exists
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 
-# ✅ Enable CORS for React frontend
+# ✅ Enable CORS ONLY for deployed frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=[
+        "https://ai-mortgage-assistant-1.onrender.com"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
