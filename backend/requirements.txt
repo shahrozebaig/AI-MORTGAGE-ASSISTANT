@@ -11,3 +11,4 @@ aiofiles
 starlette
 python-dotenv
 numpy
+opencv-python-headless
