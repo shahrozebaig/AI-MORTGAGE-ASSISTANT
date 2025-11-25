@@ -1,0 +1,161 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------------- LANDING ANIMATIONS ---------------- */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fadeIn {
+  animation: fadeIn 1.2s ease-out forwards;
+}
+
+/* ---------------- SIDEBAR ANIMATION ---------------- */
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.animate-slideIn {
+  animation: slideIn 0.6s ease-out forwards;
+}
+
+/* ---------------- DASHBOARD BENTO CARDS ---------------- */
+
+.dash-bento {
+  border-radius: 18px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
+
+/* First load animation */
+@keyframes bentoFade {
+  from {
+    opacity: 0;
+    transform: scale(0.92) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.dash-bento-animate {
+  animation: bentoFade 0.8s ease forwards;
+}
+
+/* Hover Tilt Animation */
+.dash-bento:hover {
+  transform: perspective(1200px) rotateX(5deg) rotateY(-5deg) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0, 132, 255, 0.2);
+}
+
+/* Spotlight effect */
+.dash-bento::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle 350px at var(--x) var(--y), rgba(0,120,255,0.2), transparent 40%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.dash-bento:hover::before {
+  opacity: 1;
+}
+
+/* ---------------- TARGET BUTTON ---------------- */
+
+.target-button {
+  cursor: none;
+  position: relative;
+}
+
+.target-button::after {
+  content: "◉";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  font-size: 24px;
+  color: white;
+  animation: targetPulse 2s infinite;
+}
+
+@keyframes targetPulse {
+  0% { transform: translate(-50%, -50%) scale(0.6); opacity: 0.6; }
+  50% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+  100% { transform: translate(-50%, -50%) scale(0.6); opacity: 0.6; }
+}
+
+/* ---------------- SCROLLBAR STYLE ---------------- */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #2563eb, #9333ea);
+  border-radius: 20px;
+}
+
+/* ---------------- DARK MODE TRANSITION ---------------- */
+
+body {
+  transition: background 0.4s ease, color 0.4s ease;
+}
+.glass-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(16px);
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  border: 1px solid rgba(255,255,255,0.2);
+  transition: transform 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-6px);
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out;
+}

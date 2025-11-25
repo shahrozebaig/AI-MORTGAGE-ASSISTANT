@@ -1,0 +1,44 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Uploaded loan documents
+uploads/
+temp_uploads/
+
+# AI temp files / OCR cache
+/tmp
+/cache
+/ocr_cache
+
+# Environment variables
+.env
+.env.local
+
+# Logs
+*.log
+
+# IDE / Editor
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# PyCharm
+*.iml
+
+# Migrations (optional if auto-generated)
+alembic/versions/*.py
+
+# Test artifacts
+pytest_cache/
+.coverage
