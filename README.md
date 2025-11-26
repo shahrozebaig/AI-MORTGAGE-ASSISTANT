@@ -6,6 +6,10 @@ AI Mortgage Assistant is a smart platform designed to simplify and improve the l
 
 **LIVE LINK (https://ai-mortgage-assistant-1.onrender.com)**
 
+**System Design**
+
+<img width="899" height="1457" alt="Screenshot 2025-11-26 124323" src="https://github.com/user-attachments/assets/e2b905b1-bd68-41c5-be01-3d9f7689a9a2" />
+
 ---
 ## 🔧 Tech Stack
 
@@ -28,7 +32,6 @@ AI Mortgage Assistant is a smart platform designed to simplify and improve the l
 - 🤖 AI-powered underwriting summary
 - 📊 Automated risk scoring
 - ✅ Decision classification (Approved / Needs Review / Rejected)
-- 📋 Reports dashboard with filtering
 - 🔄 Manual override: Accept / Reject after review
 - 📑 Export reports as PDF
 - 🔐 Secure document handling
@@ -44,15 +47,11 @@ AI-MORTGAGE-ASSISTANT
 │   ├── public/
 │   ├── src/
 │   │   ├── components/
-│   │   │   ├── Topbar.js
-│   │   │   ├── Sidebar.js
 │   │   ├── pages/
 │   │   │   ├── Dashboard.js
 │   │   │   ├── UploadLoan.js
 │   │   │   ├── Reports.js
 │   │   ├── App.js
-│   │   ├── index.js
-│   └── package.json
 │
 ├── backend/
 │   ├── app/
@@ -60,12 +59,10 @@ AI-MORTGAGE-ASSISTANT
 │   │   ├── routes/
 │   │   │   └── loan_routes.py
 │   │   ├── services/
-│   │   │   ├── ocr_service.py
 │   │   │   └── llm_service.py
 │   │   ├── utils/
 │   │   │   └── file_handler.py
 │   └── requirements.txt
-│
 └── README.md
 ```
 
