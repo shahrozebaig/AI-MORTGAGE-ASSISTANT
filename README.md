@@ -8,7 +8,7 @@ AI Mortgage Assistant is a smart platform designed to simplify and improve the l
 
 **System Design**
 
-<img width="899" height="1457" alt="Screenshot 2025-11-26 124323" src="https://github.com/user-attachments/assets/e2b905b1-bd68-41c5-be01-3d9f7689a9a2" />
+<img width="1158" height="1483" alt="Screenshot 2025-11-26 130159" src="https://github.com/user-attachments/assets/748373ed-46cf-4ddf-802e-e7b84059fc22" />
 
 ---
 ## 🔧 Tech Stack
